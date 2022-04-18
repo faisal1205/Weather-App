@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+    <style>
+    .mapouter{
+        position:relative;
+        text-align:right;
+        /* height:500px;
+        width:500px; */
+    }
+    #box{
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+        width: 90%;
+        padding: 0px 20px 0px 20px;
+        margin: auto;
+        margin-top: 30px;
+        font-size: 20px;
+        height: auto;
+        margin-top: 30px;
+    }
+    #map{
+        margin-right: 60px;
+        width: 40%;
+    }
+    #container>div
+    {
+        display: flex;
+        justify-content: space-evenly;
+        color: teal;
+      
+    }
+    button,input{
+        font-size: 30px;
+        color: teal;
+        border-radius: 4px;
+        margin-top: 20px;
+    }
+    body{
+        background-color: rgb(248, 245, 245);
+    }
+    #forcast{
+       
+        display: flex;
+        /* border: 1px solid red; */
+        justify-content: space-evenly;
+        margin: auto;
+        text-align: center;
+        color: white;
+        
+        width: 90%;
+        margin-top: 30px;
+        border: 0.1px solid white;
+        /* border-radius: 10px; */
+       
+    
+    }
+    #forcast>div
+   {
+    border: 0.1px solid white;
+    width: 14%;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: rgb(92, 88, 88);
+   }
+    </style>
+</head>
+<body>
+    
+    <button onclick="getWeather()">Get My Location</button>
+    <input type="text" id="city" placeholder="Enter Your City Name">
+    <button onclick="weatherData()">Submit</button>
+    <button onclick="forcastFunction()">Forcast of 7 Days</button>
+
+    <div id="forcast"></div>
+
+    <div id="box">
+
+    <div id="container"></div>
+
+  <!-- //from-- https://www.embedgooglemap.net/ -->
+  <div id="map">
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe width="600" 
+            height="500" 
+            id="gmap_canvas" 
+             frameborder="0" 
+             scrolling="no" 
+             marginheight="0" 
+             marginwidth="0">
+    
+            </iframe>
+    
+        </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<script src="index.js"></script>
